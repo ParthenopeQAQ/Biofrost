@@ -1,0 +1,18 @@
+import java.util.UUID;
+
+    /**
+     * 进行UUID的拆分
+     * @param uuid
+     * @return
+     */
+    private String splitUUID(String uuid) {
+        String[] strings = uuid.split("-");
+        StringBuffer stringBuffer = new StringBuffer();
+        for (String string : strings) {
+            stringBuffer.append(string);
+        }
+        return stringBuffer.toString();
+    }
+    
+    //使用方式：
+    String id = splitUUID(UUID.randomUUID().toString());
